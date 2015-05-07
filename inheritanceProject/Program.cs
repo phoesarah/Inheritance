@@ -20,10 +20,18 @@ namespace inheritanceProject
             Height = 0;
             Width = 0;
             Radius = 0;
+            Base = 0;
+           
         }
 
-        string[] ShapeType = new string[3] { "SQUARE", "RECTANGLE", "CIRCLE" };
-
+        string[] ShapeType = new string[6] { "SQUARE", "RECTANGLE", "CIRCLE" , "TRIANGLE", "TRAPEZOID", "ELLIPSE"};
+        
+        private double abse;
+        public double Base
+        {
+            get { return abse; }
+            set { abse = value; }
+        }
         private double height;
         public double Height
         {
@@ -44,6 +52,7 @@ namespace inheritanceProject
             get { return radius; }
             set { radius = value; }
         }
+       
 
         private string type;
         public string Type
@@ -76,6 +85,40 @@ namespace inheritanceProject
         }
     }
 
+    class Trapezoid: Shape
+    {
+        public Trapezoid()
+        {
+            Type = "Trapezoid";
+        }
+
+        public override double Area
+        {
+            get
+            {
+                return (Base * Width/2) * Height;
+            }
+
+        }
+    }
+
+    class Triangle : Shape
+    {
+        public Triangle()
+        {
+            Type = "TRIANGLE";
+        }
+        
+        public override double Area
+        {
+            get
+            {
+                return (Base * Height)/2;
+            }
+       
+        }
+    }
+
     //notice this is derived from Rectangle...that is because a square is a special kind of Rectangle. In fact we could derive ALL
     //4 sided shapes from Trapazoid!
     class Square : Rectangle
@@ -103,6 +146,22 @@ namespace inheritanceProject
         }
     }
 
+    class Ellipse : Shape
+    {
+        public Ellipse()
+        {
+            Type = "ELLIPSE";
+        }
+
+        public override double Area
+        {
+            get
+            {
+                return 3.14 * Height * Width;
+            }
+        }
+    }
+
 
     //We will create an instance of the Rectangle class and use it to calculate the area and display it.
     class UseRactangle
@@ -116,13 +175,26 @@ namespace inheritanceProject
             Rect.Width = 4;
 
             Console.WriteLine("Total area of the rectangle: {0}", Rect.Area);
-            Console.ReadKey();
+            
 
             Circle Circ = new Circle();
-
+            Triangle tri = new Triangle();
             Circ.Radius = 1;
+            tri.Height = 3;
+            tri.Base = 3;
 
+            Ellipse ell = new Ellipse();
+            ell.Height = 3;
+            ell.Width = 4;
+
+            Trapezoid trap = new Trapezoid();
+            trap.Height = 2;
+            trap.Width = 3;
+            trap.Base = 5;
+            Console.WriteLine("Total area of the Trapezoid: {0}", trap.Area);
+            Console.WriteLine("Total area of the Ellipse: {0}", ell.Area);
             Console.WriteLine("Total area of the circle: {0}", Circ.Area);
+            Console.WriteLine("Total area of the Triangle: {0}",tri.Area);
             Console.ReadKey();
         }
     }

@@ -3,3 +3,9 @@ c:\users\elsa\documents\visual studio 2013\Projects\inheritanceProject\inheritan
 c:\users\elsa\documents\visual studio 2013\Projects\inheritanceProject\inheritanceProject\bin\Debug\inheritanceProject.pdb
 c:\users\elsa\documents\visual studio 2013\Projects\inheritanceProject\inheritanceProject\obj\Debug\inheritanceProject.exe
 c:\users\elsa\documents\visual studio 2013\Projects\inheritanceProject\inheritanceProject\obj\Debug\inheritanceProject.pdb
+D:\Workprograms\Inheritance\inheritanceProject\bin\Debug\inheritanceProject.exe.config
+D:\Workprograms\Inheritance\inheritanceProject\obj\Debug\inheritanceProject.exe
+D:\Workprograms\Inheritance\inheritanceProject\obj\Debug\inheritanceProject.pdb
+D:\Workprograms\Inheritance\inheritanceProject\obj\Debug\inheritanceProject.csprojResolveAssemblyReference.cache
+D:\Workprograms\Inheritance\inheritanceProject\bin\Debug\inheritanceProject.exe
+D:\Workprograms\Inheritance\inheritanceProject\bin\Debug\inheritanceProject.pdb
